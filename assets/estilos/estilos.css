@@ -1,0 +1,144 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 50px 50px 1fr 50px;
+    grid-template-areas: 
+    "zh zh" "zn zn" "zs za" "zf zf";
+}
+header{
+    grid-area: zh;
+    background-color: rgb(247, 82, 82);
+}
+#crear_cuenta{
+    position: absolute;
+    left: 1300px;
+    top: 20px;
+}
+#loguearse{
+    position: absolute;
+    left: 1200px;
+    top: 20px;
+}
+#enunciado{
+    position: relative;
+    left: 700px;
+    top: 10px;
+    font-size: 25px;
+}
+nav{
+    grid-area: zn;
+    background-color: rgb(251, 132, 132);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+section{
+    grid-area: zs;
+    background-color: rgb(78, 77, 77);
+    
+   
+}
+.talla{
+    border: solid black;
+    background-color: blue;
+    position: fixed;
+    margin: 10px;
+    padding: 20px;
+     /* display: flex;  */
+    align-items: center;
+    justify-content: center;
+}
+section  div {
+    margin: 15px;
+    border-radius: 5px;
+    background-color: gray;
+    text-align: center;
+   
+}
+
+aside{
+    grid-area: za;
+    background-color: rgb(50, 48, 48);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+footer{
+    grid-area: zf;
+    background-color: rgb(247, 82, 82);
+}
+.prendas_hombre{
+    background-color: rgb(229, 227, 227);
+    margin: 10px;
+    width: 30%;
+    height: 40%;
+ /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.prendas_mujer{
+    background-color: rgb(229, 227, 227);
+    margin: 10px;
+    width: 30%;
+    height: 40%;
+}
+.no_talla{
+    background-color: red;
+}
+.prendas_mujer p{
+margin: 10px;
+/* background-color: rgb(128, 58, 0); */
+}
+#div_form_login{
+    position: absolute;
+    display: none;
+}
+#div_modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+#div_modal > div{
+    /* display: flex; */
+    
+    /* justify-content: center; */
+    border: 2px solid blue;
+    padding: 20px;
+    background-color: #fff;
+    width: 13%;
+    height: auto;
+    box-shadow: 2px 2px 2px gray;
+    padding: 10px;
+    
+
+}
+.comprar i{
+    color: green;
+}
+
+
+ 
+ #div_form_login { 
+    -webkit-transform-origin: top center; 
+    transform-origin: top center; 
+    -webkit-animation-name: swing; 
+    animation-name: swing; 
+ }
+/*-moz-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+transform: scaleX(-1);
+-ms-filter: fliph; /*IE*/
+/*filter: fliph; /*IE*/

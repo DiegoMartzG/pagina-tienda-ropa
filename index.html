@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="assets/estilos/estilos.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="assets/scripts/script.js"></script>
+</head>
+
+<body>
+    <div id="div_modal">
+        <div id="div_form_login">
+            <input type="hidden" id="usu_id">
+            <label for="usu_nombre">nombre</label>
+            <input type="text" id="usu_nombre">
+            <label for="usu_password">password</label>
+            <input type="password" id="usu_password">
+            <p id="usu_error" class="linea_error"></p>
+            <div id="botonera_de_login">
+                <div onclick="fCerrar()">Cancelar</div>
+                <div onclick="fLogin()">Login</div>
+            </div>
+        </div>
+        <div id="div_form_crear_cuenta">
+            <label for="ccusu_nombre">nombre</label>
+            <input type="text" id="ccusu_nombre">
+            <label for="ccusu_password">password</label>
+            <input type="text" id="ccusu_password">
+            <label for="rccusu_password">password</label>
+            <input type="password" id="rccusu_password">
+            <div id="rdiv_error" class="rdiv_error"></div>
+            <div class="botonera">
+                <div onclick=" fCerrar()">Cancelar</div>
+                <div onclick="fCrearCuenta()" id="crear_cuenta">Crear Cuenta</div>
+            </div>
+
+        </div>
+        <div id="div_form_contenido_hombre">
+            <input type="hidden" id="hom_id">
+            <label for="hom_nombre">nombre prenda</label>
+            <input type="text" id="hom_nombre">
+            <label for="hom_precio">precio prenda</label>
+
+            <input type="text" id="hom_precio">
+            <label for="hom_talla">talla prenda</label>
+
+            <input type="text" id="hom_talla">
+            <label for="hom_color">color prenda</label>
+
+            <input type="text" id="hom_color">
+            <label for="hom_stock">stock prenda</label>
+
+            <input type="text" id="hom_stock">
+            <div class="botonera">
+                <div onclick="fCerrar()">Cancelar</div>
+                <div id="formulario_añadir_hombre" onclick="fCRUDHombre('a')">Grabar</div>
+                <div id="formulario_eliminar_hombre" onclick="fCRUDHombre('e')">Eliminar</div>
+                <div id="formulario_modificar_hombre" onclick="fCRUDHombre('m')">Modificar</div>
+            </div>
+        </div>
+        <div id="div_form_contenido_mujer">
+
+            <input type="hidden" id="mu_id">
+
+            <label for="mu_nombre">nombre prenda</label>
+
+            <input type="text" id="mu_nombre">
+
+            <label for="mu_precio">precio prenda</label>
+
+            <input type="text" id="mu_precio">
+
+            <label for="mu_talla">talla prenda</label>
+
+            <input type="text" id="mu_talla">
+
+            <label for="mu_color">color prenda</label>
+
+            <input type="text" id="mu_color">
+
+            <label for="mu_stock">stock prenda</label>
+
+            <input type="text" id="mu_stock">
+
+            <div class="botonera">
+                <div onclick="fCerrar()">Cancelar</div>
+                <div id="formulario_añadir_mujer" onclick="fCRUDMujer('a')">Grabar</div>
+                <div id="formulario_eliminar_mujer" onclick="fCRUDMujer('e')">Eliminar</div>
+                <div id="formulario_modificar_mujer" onclick="fCRUDMujer('m')">Modificar</div>
+            </div>
+        </div>
+        <div id="div_form_total_compra">
+
+            <label for="total_compra">Total :</label>
+            <div id="total_compra"></div>
+            <div onclick="fCerrar()">continuar comprando</div>
+            <div onclick="fFinalizarCompra()">finalizar compra</div>
+            <div onclick="fCancelarConpra()">Cancelar compra</div>
+            <div onclick="fCerrar()">cerrar</div>
+        </div>
+        <div id="finalizar_compra">
+            <label for="nombre_producto">nombre</label>
+            <div id="nombre_producto"></div>
+            <label for="precio_producto">precio</label>
+            <div id="precio_producto"></div>
+            <label for="talla_producto"></label>
+            <div id="talla_producto"></div>
+            <label for="total_a_pagar"></label>
+            <div id="total_a_pagar"></div>
+        </div>
+    </div>
+    <header>
+        <div id="enunciado">Tienda de Ropa</div>
+        <div onclick="fMostrarForm('#div_form_login')" id="loguearse">Login</div>
+        <div onclick="fMostrarForm('#div_form_crear_cuenta')" id="crear_cuenta">Crear Cuenta</div>
+    </header>
+    <nav>
+        <div onclick="fProductoHombre()">HOMBRE</div>
+        <div onclick="fProductoMujer()">MUJER</div>
+        <div>NIÑOS</div>
+    </nav>
+    <aside></aside>
+    <section>
+        <!-- <div id="talla">
+            <p>TALLAS</p>
+        <div onclick="fFiltroXXL()">XXL</div>
+        <div onclick="fFiltroXL()">XL</div>
+        <div onclick="fFiltroL()">L</div>
+        <div onclick="fFiltroM()">M</div>
+        <div onclick="fFiltroS()">S</div>
+       </div>  -->
+
+    </section>
+    <footer></footer>
+</body>
+
+</html>
